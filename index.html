@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+<script>
+	let employees = [
+		{"id": 1,
+		"name": "Vojislav",
+		"email": "vojislav87@gmail.com",
+		"tasks performed": 1},
+		{"id": 2,
+		"name": "Velimir",
+		"email": "velja87@gmail.com",
+		"tasks performed": 2}
+	]
+	console.log(employees);
+	
+		function addEmployee(){
+		employees.push({
+		"id": employees.length +1,
+		"name": document.getElementById("name").value,
+		"email": document.getElementById("email").value,
+		"tasks": document.getElementById("tasks").value
+		});
+		console.log("CACA GEJ");
+	}
+	console.log(addEmployee);
+	
+</script>
+</head>
+
+<body>
+	<form>
+		<label for="name">Name:</label><br>
+		<input type="text" id="name" name="name"></input><br>
+		<label for="email">Email:</label><br>
+		<input type="text" id="email" name="email"></input><br>
+		<label for="tasks">Tasks Performed:</label><br>
+		<input type="text" id="tasks" name="tasks"></input><br>
+		<button onClick="addEmployee()">Add New Employee</button>
+	</form>
+</body>
+
+</html>
